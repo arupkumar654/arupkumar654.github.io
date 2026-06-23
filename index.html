@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Arup Sethy | Senior Project Manager</title>
+<title>Arup Sethy | Project Manager</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -13,184 +15,187 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-font-family:Segoe UI, Arial, sans-serif;
-background:#f3f6fb;
+background:#f5f7fa;
 color:#333;
-line-height:1.7;
 }
+
+/* HEADER */
 
 .hero{
-background:linear-gradient(135deg,#0f172a,#1d4ed8);
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
 color:white;
 padding:80px 10%;
-}
-
-.hero-container{
-max-width:1200px;
-margin:auto;
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:50px;
 flex-wrap:wrap;
 }
 
-.hero-left{
-flex:1;
-min-width:300px;
+.hero-content{
+max-width:700px;
 }
 
-.hero-left h1{
+.hero h1{
 font-size:60px;
-font-weight:700;
 margin-bottom:10px;
 }
 
-.hero-left h2{
+.hero h2{
 font-size:28px;
 font-weight:400;
 margin-bottom:20px;
+color:#cbd5e1;
 }
 
-.hero-left p{
+.hero p{
 font-size:18px;
+line-height:1.8;
 margin-bottom:30px;
 }
 
-.hero-right{
-text-align:center;
+/* PHOTO */
+
+.profile-photo img{
+width:280px;
+height:280px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid white;
+box-shadow:0 15px 35px rgba(0,0,0,.3);
 }
 
-.hero-right img{
-width:260px;
-height:260px;
-object-fit:cover;
-border-radius:20px;
-border:6px solid white;
-box-shadow:0 15px 40px rgba(0,0,0,0.3);
+/* BUTTONS */
+
+.btn-group{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .btn{
 display:inline-block;
 padding:14px 28px;
-margin-right:12px;
-margin-top:10px;
-text-decoration:none;
-border-radius:8px;
-font-weight:600;
-transition:0.3s;
-}
-
-.btn-primary{
 background:white;
-color:#1d4ed8;
-}
-
-.btn-secondary{
-background:#0A66C2;
-color:white;
+color:#0f172a;
+text-decoration:none;
+font-weight:600;
+border-radius:8px;
+transition:.3s;
 }
 
 .btn:hover{
 transform:translateY(-3px);
 }
 
-.container{
-max-width:1200px;
-margin:auto;
-padding:50px 20px;
+.btn-blue{
+background:#2563eb;
+color:white;
 }
+
+/* SECTION */
 
 .section{
-background:white;
-padding:35px;
-margin-bottom:25px;
-border-radius:16px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
+padding:80px 10%;
 }
 
-.section h2{
-margin-bottom:20px;
-color:#1d4ed8;
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#0f172a;
 }
+
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#2563eb;
+}
+
+/* STATS */
 
 .stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.stat-card{
-background:#f8fbff;
-padding:25px;
-border-radius:12px;
-border-left:5px solid #2563eb;
-}
-
-.stat-card h3{
-font-size:28px;
-color:#1d4ed8;
-margin-bottom:10px;
-}
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
-}
-
-.skill{
-background:#e0ecff;
-color:#1d4ed8;
-padding:10px 18px;
-border-radius:30px;
-font-weight:600;
-}
-
-.contact-box{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.contact-item{
-padding:15px;
-background:#f8fbff;
-border-radius:10px;
-}
-
-footer{
-text-align:center;
-padding:25px;
 background:#0f172a;
 color:white;
-margin-top:20px;
+padding:70px 10%;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+text-align:center;
+gap:30px;
+}
+
+.stats h2{
+font-size:50px;
+color:#60a5fa;
+}
+
+.stats p{
+margin-top:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+footer a{
+color:#60a5fa;
+text-decoration:none;
 }
 
 @media(max-width:768px){
 
-.hero-left h1{
-font-size:40px;
+.hero{
+text-align:center;
+justify-content:center;
 }
 
-.hero-left h2{
+.profile-photo{
+margin-top:40px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
 font-size:22px;
 }
 
-.hero-container{
-text-align:center;
-}
-
-.hero-right img{
-width:180px;
-height:180px;
-}
-
-.contact-box{
-grid-template-columns:1fr;
+.profile-photo img{
+width:220px;
+height:220px;
 }
 
 }
@@ -203,155 +208,172 @@ grid-template-columns:1fr;
 
 <section class="hero">
 
-<div class="hero-container">
-
-<div class="hero-left">
+<div class="hero-content">
 
 <h1>Arup Sethy</h1>
 
-<h2>Senior Project Manager | PMO Leader | Delivery Manager</h2>
+<h2>Project Manager | PMO | Delivery Manager</h2>
 
 <p>
-PMP® | CSPO® | ITIL® | 12+ Years of Experience Delivering Enterprise Programs and Digital Transformation Initiatives
+PMP® Certified Project Manager with 12+ years of experience delivering
+enterprise IT, Digital Transformation, SaaS and AI-driven programs.
+Proven track record managing ₹50+ Cr portfolios, PMO governance,
+stakeholder management, Agile delivery and business transformation
+initiatives across Automotive, Insurance, Aviation and Telecom domains.
 </p>
 
-<a href="Arup_Sethy_Resume.pdf" target="_blank" class="btn btn-primary">
+<div class="btn-group">
+
+<a href="Arup_Resume.pdf" download class="btn">
 📄 Download Resume
 </a>
 
-<a href="https://in.linkedin.com/in/arup-sethy-53aab8a5" target="_blank" class="btn btn-secondary">
-LinkedIn Profile
+<a href="career.html" class="btn btn-blue">
+🚀 Career Highlights
+</a>
+
+<a href="https://in.linkedin.com/in/arup-sethy-53aab8a5"
+target="_blank"
+class="btn">
+LinkedIn
 </a>
 
 </div>
 
-<div class="hero-right">
+</div>
 
+<div class="profile-photo">
 <img src="profile.jpg" alt="Arup Sethy">
+</div>
 
+</section>
+
+<section class="stats">
+
+<div class="stats-grid">
+
+<div>
+<h2>12+</h2>
+<p>Years Experience</p>
+</div>
+
+<div>
+<h2>50+</h2>
+<p>Projects Delivered</p>
+</div>
+
+<div>
+<h2>₹50Cr+</h2>
+<p>Portfolio Managed</p>
+</div>
+
+<div>
+<h2>4</h2>
+<p>Industry Domains</p>
 </div>
 
 </div>
 
 </section>
 
-<div class="container">
+<section class="section">
 
-<div class="section">
+<h2 class="section-title">Core Expertise</h2>
 
-<h2>Professional Summary</h2>
+<div class="grid">
 
+<div class="card">
+<h3>Project Management</h3>
 <p>
-Accomplished Senior Project Manager, PMO Leader and Delivery Manager with 12+ years of experience leading enterprise software implementations, cloud transformation initiatives and strategic business programs across Automotive, Aviation and Insurance domains.
+End-to-end project delivery, planning, execution,
+monitoring, governance and closure.
 </p>
+</div>
 
-<br>
-
+<div class="card">
+<h3>PMO Leadership</h3>
 <p>
-Expert in Agile delivery, stakeholder management, governance frameworks, portfolio planning, budget management and cross-functional leadership. Proven track record of driving business value through successful project execution, operational excellence and digital transformation.
+Portfolio governance, KPI tracking, budget control,
+risk management and reporting.
 </p>
+</div>
+
+<div class="card">
+<h3>Agile Delivery</h3>
+<p>
+Scrum, Kanban, SAFe, Sprint Planning,
+Release Management and Agile Coaching.
+</p>
+</div>
+
+<div class="card">
+<h3>Digital Transformation</h3>
+<p>
+Enterprise modernization, cloud migration,
+automation and process optimization.
+</p>
+</div>
+
+<div class="card">
+<h3>AI & Innovation</h3>
+<p>
+Voice Bots, GenAI, Intelligent Automation,
+Computer Vision solutions.
+</p>
+</div>
+
+<div class="card">
+<h3>Stakeholder Management</h3>
+<p>
+Executive communication, vendor management,
+cross-functional collaboration and governance.
+</p>
+</div>
 
 </div>
 
-<div class="section">
+</section>
 
-<h2>Career Highlights</h2>
+<section class="section">
 
-<div class="stats">
+<h2 class="section-title">Certifications</h2>
 
-<div class="stat-card">
-<h3>12+</h3>
-<p>Years of Professional Experience</p>
-</div>
+<div class="grid">
 
-<div class="stat-card">
+<div class="card">
 <h3>PMP®</h3>
-<p>Project Management Professional</p>
+<p>Project Management Institute (PMI)</p>
 </div>
 
-<div class="stat-card">
+<div class="card">
 <h3>CSPO®</h3>
 <p>Certified Scrum Product Owner</p>
 </div>
 
-<div class="stat-card">
-<h3>3+</h3>
-<p>Industry Domains Served</p>
+<div class="card">
+<h3>Agile Scrum Master</h3>
+<p>Scrum Alliance</p>
+</div>
+
+<div class="card">
+<h3>ITIL® 4</h3>
+<p>IT Service Management Foundation</p>
 </div>
 
 </div>
 
-</div>
-
-<div class="section">
-
-<h2>Core Competencies</h2>
-
-<div class="skills">
-
-<span class="skill">Project Management</span> <span class="skill">Program Management</span> <span class="skill">PMO Governance</span> <span class="skill">Delivery Management</span> <span class="skill">Portfolio Management</span> <span class="skill">Agile & Scrum</span> <span class="skill">Risk Management</span> <span class="skill">Stakeholder Management</span> <span class="skill">Budget Management</span> <span class="skill">Digital Transformation</span> <span class="skill">Cloud Projects</span> <span class="skill">Business Analysis</span>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Certifications</h2>
-
-<ul>
-<li>Project Management Professional (PMP®)</li>
-<li>Certified Scrum Product Owner (CSPO®)</li>
-<li>Certified Agile Business Analyst (CABA®)</li>
-<li>ITIL® 4 Foundation</li>
-<li>Team Kanban Practitioner (TKP)</li>
-</ul>
-
-</div>
-
-<div class="section">
-
-<h2>Tools & Technologies</h2>
-
-<div class="skills">
-
-<span class="skill">JIRA</span> <span class="skill">Confluence</span> <span class="skill">Tableau</span> <span class="skill">Archer</span> <span class="skill">JAMA</span> <span class="skill">AWS</span> <span class="skill">Azure</span> <span class="skill">SQL</span> <span class="skill">Kanban</span> <span class="skill">Scrum</span>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Contact Information</h2>
-
-<div class="contact-box">
-
-<div class="contact-item">
-📧 arupkumarset@gmail.com
-</div>
-
-<div class="contact-item">
-📱 +91 8130590534
-</div>
-
-<div class="contact-item">
-💼 LinkedIn Profile
-</div>
-
-<div class="contact-item">
-📍 India
-</div>
-
-</div>
-
-</div>
-
-</div>
+</section>
 
 <footer>
 
-© 2026 Arup Sethy | Senior Project Manager | PMO Leader | Delivery Manager
+<p>
+📧 arupkumarset@gmail.com |
+📱 +91 8130590534
+</p>
+
+<p style="margin-top:10px;">
+© 2026 Arup Sethy | Project Manager Portfolio
+</p>
 
 </footer>
 

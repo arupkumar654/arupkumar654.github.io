@@ -1,169 +1,325 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arup Sethy | Project Manager | PMO | Delivery Manager</title>
+<title>Arup Sethy | Senior Project Manager</title>
 
 <style>
-body{
+
+*{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f6f9;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:#f4f7fa;
     color:#333;
+    line-height:1.6;
 }
 
 header{
-    background:#0a3d62;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
     color:white;
     text-align:center;
     padding:60px 20px;
 }
 
+.profile-img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    margin-bottom:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
 header h1{
-    margin:0;
-    font-size:48px;
+    font-size:52px;
+    margin-bottom:10px;
 }
 
 header h2{
-    margin-top:10px;
-    font-weight:normal;
+    font-weight:400;
+    margin-bottom:15px;
 }
 
-.container{
-    width:90%;
-    max-width:1100px;
-    margin:auto;
-    padding:30px 0;
-}
-
-.section{
-    background:white;
-    padding:25px;
-    margin-bottom:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-.section h2{
-    color:#0a3d62;
-    margin-top:0;
+header p{
+    font-size:20px;
+    margin-bottom:25px;
 }
 
 .btn{
     display:inline-block;
-    background:#0078d4;
-    color:white;
-    padding:12px 25px;
-    text-decoration:none;
-    border-radius:5px;
+    padding:14px 28px;
     margin:10px;
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.resume-btn{
+    background:#2563eb;
+}
+
+.linkedin-btn{
+    background:#0A66C2;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    margin-top:-40px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card h2{
+    color:#1e3a8a;
+    margin-bottom:20px;
+    border-left:5px solid #2563eb;
+    padding-left:12px;
 }
 
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
 }
 
 .skill{
-    background:#eaf2ff;
-    padding:10px 15px;
-    border-radius:20px;
+    background:#e8f0ff;
+    color:#1e3a8a;
+    padding:10px 16px;
+    border-radius:25px;
+    font-weight:600;
+}
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.highlight-box{
+    background:#f8fafc;
+    border-left:5px solid #2563eb;
+    padding:20px;
+    border-radius:8px;
+}
+
+.highlight-box h3{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+ul{
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+.contact p{
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+.contact a{
+    color:#2563eb;
+    text-decoration:none;
 }
 
 footer{
     text-align:center;
-    padding:20px;
-    background:#0a3d62;
+    background:#0f172a;
     color:white;
+    padding:25px;
+    margin-top:30px;
 }
-</style>
 
+@media(max-width:768px){
+
+header h1{
+    font-size:36px;
+}
+
+header h2{
+    font-size:22px;
+}
+
+.profile-img{
+    width:140px;
+    height:140px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-    <h1>Arup Sethy</h1>
-    <h2>Project Manager | PMO | Delivery Manager</h2>
-    <p>PMP® | CSPO® | 12+ Years Experience</p>
 
-```
-<a class="btn" href="Arup_Sethy_Resume.pdf" target="_blank">Download Resume</a>
+<img src="profile.jpg" alt="Arup Sethy" class="profile-img">
 
-<a class="btn" href="https://in.linkedin.com/in/arup-sethy-53aab8a5" target="_blank">LinkedIn Profile</a>
-```
+<h1>Arup Sethy</h1>
+
+<h2>Senior Project Manager | PMO Leader | Delivery Manager</h2>
+
+<p>PMP® | CSPO® | 12+ Years Experience</p>
+
+<a class="btn resume-btn"
+href="Arup_Sethy_Resume.pdf"
+target="_blank">
+📄 Download Resume
+</a>
+
+<a class="btn linkedin-btn"
+href="https://in.linkedin.com/in/arup-sethy-53aab8a5"
+target="_blank">
+LinkedIn Profile
+</a>
 
 </header>
 
 <div class="container">
 
-<div class="section">
-<h2>About Me</h2>
+<div class="card">
+
+<h2>Professional Summary</h2>
+
 <p>
-Results-driven Project Manager, PMO and Delivery Manager with 12+ years of experience leading enterprise applications, cloud initiatives, aviation, automobile, insurance and digital transformation programs. Proven expertise in Agile, Scrum, stakeholder management, risk mitigation, governance, budgeting and cross-functional leadership. PMP and CSPO certified professional with a strong track record of delivering projects on time, within scope and budget.
+Results-driven Senior Project Manager, PMO Leader and Delivery Manager with over 12 years of experience delivering enterprise applications, cloud initiatives, digital transformation programs and large-scale business solutions across Automotive, Aviation and Insurance domains.
 </p>
+
+<br>
+
+<p>
+Proven expertise in Agile delivery, PMO governance, stakeholder engagement, portfolio management, risk mitigation, budget control and cross-functional leadership. PMP® and CSPO® certified professional with a strong track record of delivering strategic programs on time and within budget.
+</p>
+
 </div>
 
-<div class="section">
+<div class="card">
+
 <h2>Core Competencies</h2>
 
 <div class="skills">
+
 <div class="skill">Project Management</div>
 <div class="skill">Program Management</div>
 <div class="skill">PMO Governance</div>
 <div class="skill">Delivery Management</div>
-<div class="skill">Agile & Scrum</div>
-<div class="skill">Risk Management</div>
-<div class="skill">Stakeholder Management</div>
-<div class="skill">Budget Management</div>
 <div class="skill">Portfolio Management</div>
-<div class="skill">Cloud Projects</div>
+<div class="skill">Agile & Scrum</div>
+<div class="skill">Stakeholder Management</div>
+<div class="skill">Risk Management</div>
+<div class="skill">Change Management</div>
+<div class="skill">Cloud Transformation</div>
 <div class="skill">Business Analysis</div>
 <div class="skill">Digital Transformation</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Professional Highlights</h2>
+
+<div class="highlight-grid">
+
+<div class="highlight-box">
+<h3>12+ Years</h3>
+<p>Experience managing enterprise programs and strategic initiatives.</p>
+</div>
+
+<div class="highlight-box">
+<h3>Multi-Domain Expertise</h3>
+<p>Automotive, Aviation, Insurance and Digital Transformation.</p>
+</div>
+
+<div class="highlight-box">
+<h3>Certified Professional</h3>
+<p>PMP®, CSPO®, CABA®, ITIL® and Kanban Practitioner.</p>
+</div>
+
+<div class="highlight-box">
+<h3>Agile Leadership</h3>
+<p>Extensive experience leading Agile, Hybrid and Waterfall programs.</p>
 </div>
 
 </div>
 
-<div class="section">
+</div>
+
+<div class="card">
+
 <h2>Certifications</h2>
 
 <ul>
 <li>Project Management Professional (PMP®)</li>
 <li>Certified Scrum Product Owner (CSPO®)</li>
-<li>Certified Agile Business Analyst (CABA)</li>
+<li>Certified Agile Business Analyst (CABA®)</li>
 <li>ITIL® 4 Foundation</li>
 <li>Team Kanban Practitioner (TKP)</li>
 </ul>
 
 </div>
 
-<div class="section">
-<h2>Professional Highlights</h2>
+<div class="card">
 
-<ul>
-<li>12+ years of experience delivering enterprise-scale projects.</li>
-<li>Led cross-functional teams across Aviation, Automobile and Insurance domains.</li>
-<li>Managed project planning, execution, monitoring and delivery.</li>
-<li>Implemented PMO governance frameworks and reporting structures.</li>
-<li>Delivered cloud-based and digital transformation initiatives.</li>
-<li>Expert in Agile, Scrum, Waterfall and Hybrid methodologies.</li>
-</ul>
+<h2>Tools & Technologies</h2>
+
+<div class="skills">
+
+<div class="skill">JIRA</div>
+<div class="skill">Confluence</div>
+<div class="skill">Tableau</div>
+<div class="skill">Archer</div>
+<div class="skill">JAMA</div>
+<div class="skill">AWS</div>
+<div class="skill">Azure</div>
+<div class="skill">SQL</div>
+<div class="skill">Kanban</div>
+<div class="skill">Scrum</div>
+<div class="skill">PMO Reporting</div>
+<div class="skill">Governance</div>
 
 </div>
 
-<div class="section">
-<h2>Contact</h2>
+</div>
 
-<p><strong>Email:</strong> arupkumarset@gmail.com</p>
+<div class="card contact">
 
-<p><strong>Mobile:</strong> +91 8130590534</p>
+<h2>Contact Information</h2>
 
-<p><strong>LinkedIn:</strong>
+<p>📧 Email: <a href="mailto:arupkumarset@gmail.com">arupkumarset@gmail.com</a></p>
+
+<p>📱 Mobile: +91 8130590534</p>
+
+<p>💼 LinkedIn:
 <a href="https://in.linkedin.com/in/arup-sethy-53aab8a5" target="_blank">
-View Profile
+View Professional Profile
 </a>
 </p>
 
@@ -172,7 +328,9 @@ View Profile
 </div>
 
 <footer>
-© 2026 Arup Sethy | Project Manager | PMO | Delivery Manager
+
+© 2026 Arup Sethy | Senior Project Manager | PMO Leader | Delivery Manager
+
 </footer>
 
 </body>

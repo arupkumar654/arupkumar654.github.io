@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: url('images/hd-background.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-size: cover;   /* responsive full-page fit */
   color: #0b1a3a;
 }
 
@@ -78,7 +78,7 @@ body {
 
 .hero-content {
   max-width: 600px;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.85); /* readability box */
   padding: 20px;
   border-radius: 6px;
 }
@@ -153,4 +153,123 @@ body {
 
 .section-title {
   text-align: center;
-  margin-bottom: 40px
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Contact Section - Light Box (default) */
+#contact .card {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  background: rgba(255,255,255,0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#contact h3 {
+  margin-bottom: 15px;
+}
+
+#contact p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #0b1a3a;
+}
+
+/* Contact Section - Dark Theme */
+#contact.dark .card {
+  background: rgba(20,20,20,0.95);
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#contact.dark h3 {
+  color: #ffffff;
+}
+
+#contact.dark p {
+  color: #dddddd;
+}
+
+#contact.dark a {
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+#contact.dark a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.95);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .profile-photo img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-photo img {
+    width: 140px;
+    height: 140px;
+  }
+
+  body {
+    background-attachment: scroll; /* smoother on mobile */
+  }
+}

@@ -1,109 +1,3 @@
-Got it — here’s a **cleaned‑up full code set** for your portfolio site. I’ve removed unnecessary spacing, tightened margins/padding, and kept the responsive design, square profile photo, and light/dark contact box options.  
-
----
-
-### 📄 `index.html`
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arup Sethy | Project Manager</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <div class="logo">Arup Sethy</div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#expertise">Expertise</a></li>
-      <li class="dropdown">
-        <a href="#">Portfolio</a>
-        <ul class="dropdown-menu">
-          <li><a href="career.html">Career Highlights</a></li>
-          <li><a href="certifications.html">Certifications</a></li>
-          <li><a href="Arup_Sethy_Resume.pdf" download>Download Resume</a></li>
-        </ul>
-      </li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Arup Sethy</h1>
-      <h2>Project Manager | PMO | Delivery Manager</h2>
-      <p>
-        PMP® Certified Project Manager with 12+ years of experience delivering
-        enterprise IT, Digital Transformation, SaaS and AI-driven programs.
-      </p>
-      <div class="btn-group">
-        <a href="Arup_Sethy_Resume.pdf" download class="btn">📄 Resume</a>
-        <a href="career.html" class="btn btn-blue">🚀 Career</a>
-        <a href="certifications.html" class="btn">🏆 Certifications</a>
-        <a href="https://in.linkedin.com/in/arup-sethy-53aab8a5" target="_blank" class="btn">LinkedIn</a>
-      </div>
-    </div>
-    <div class="profile-photo">
-      <img src="profile.jpg" alt="Arup Sethy">
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <section id="about" class="stats">
-    <div class="stats-grid">
-      <div><h2>12+</h2><p>Years Experience</p></div>
-      <div><h2>50+</h2><p>Projects Delivered</p></div>
-      <div><h2>₹50Cr+</h2><p>Portfolio Managed</p></div>
-      <div><h2>4</h2><p>Industry Domains</p></div>
-    </div>
-  </section>
-
-  <!-- EXPERTISE -->
-  <section id="expertise" class="section">
-    <h2 class="section-title">Core Expertise</h2>
-    <div class="grid">
-      <div class="card"><h3>Project Management</h3><p>End-to-end project delivery.</p></div>
-      <div class="card"><h3>PMO Leadership</h3><p>Portfolio governance & reporting.</p></div>
-      <div class="card"><h3>Agile Delivery</h3><p>Scrum, Kanban, Release Management.</p></div>
-      <div class="card"><h3>Digital Transformation</h3><p>Cloud migration & automation.</p></div>
-      <div class="card"><h3>AI & Innovation</h3><p>Voice Bots, GenAI, Analytics.</p></div>
-      <div class="card"><h3>Stakeholder Management</h3><p>Executive communication & governance.</p></div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section dark">
-    <h2 class="section-title">Contact</h2>
-    <div class="card">
-      <h3>Let's Connect</h3>
-      <p>📧 arupkumarset@gmail.com</p>
-      <p>📱 +91 8130590534</p>
-      <p><a href="https://in.linkedin.com/in/arup-sethy-53aab8a5" target="_blank">LinkedIn</a></p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Arup Sethy | PMP® Certified Project Manager</p>
-  </footer>
-
-</body>
-</html>
-```
-
----
-
-### 🎨 `style.css`
-```css
 /* General Reset */
 body {
   margin: 0;
@@ -120,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 30px; /* tighter */
+  padding: 12px 30px;
   flex-wrap: wrap;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
@@ -139,12 +33,29 @@ body {
 .nav-links a { text-decoration: none; color: #0b1a3a; font-weight: 500; }
 .nav-links a:hover { text-decoration: underline; }
 
+/* Contact Info Top Right */
+.contact-top {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+}
+
+.contact-top a {
+  text-decoration: none;
+  color: #0b1a3a;
+  font-weight: 500;
+}
+
+.contact-top a:hover {
+  color: #0073e6;
+}
+
 /* Hero Section */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 20px; /* reduced */
+  padding: 60px 20px;
   flex-wrap: wrap;
   color: #0b1a3a;
 }
@@ -152,7 +63,7 @@ body {
 .hero-content {
   max-width: 600px;
   background: rgba(255,255,255,0.85);
-  padding: 15px; /* reduced */
+  padding: 15px;
   border-radius: 6px;
 }
 
@@ -185,23 +96,17 @@ body {
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
 .card { background: white; padding: 15px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
 
-/* Contact Section - Light */
-#contact .card {
-  max-width: 450px;
-  margin: 20px auto;
-  text-align: center;
-  background: rgba(255,255,255,0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-#contact h3 { margin-bottom: 10px; }
-#contact p { margin: 6px 0; font-size: 1rem; color: #0b1a3a; }
+/* Footer */
+footer { text-align: center; padding: 15px; background: rgba(255,255,255,0.95); font-size: 0.9rem; }
 
-/* Contact Section - Dark Theme */
-#contact.dark .card {
-  background: rgba(20,20,20,0.95);
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
- 
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-content { max-width: 100%; }
+  .profile-photo img { width: 180px; height: 180px; }
+}
+
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; align-items: flex-start; }
+  .nav-links { flex-direction: column; gap: 10px; }
+  .contact-top { flex

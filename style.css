@@ -56,24 +56,36 @@ body{
 .logo{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:6px;
 
     font-size:28px;
     font-weight:700;
     color:#ffffff;
+    text-decoration:none;
 }
 
+/* Small Transparent India Flag Logo */
 .logo-flag{
-    width:32px;
-    height:22px;
-    object-fit:cover;
-    border-radius:3px;
-    box-shadow:0 2px 6px rgba(0,0,0,.3);
+    width:20px;
+    height:14px;
+
+    object-fit:contain;
+    display:inline-block;
+
+    background:transparent !important;
+
+    border:none;
+    border-radius:0;
+    box-shadow:none;
+
+    vertical-align:middle;
 }
 
+/* If using emoji flag */
 .flag{
-    font-size:32px;
+    font-size:18px;
     line-height:1;
+    margin-left:2px;
 }
 
 .nav-links{
@@ -483,10 +495,16 @@ footer p{
     }
 }
 
-@media(max-width:480px){
+@media(max-width:768px){
 
-    .logo{
+      .logo{
         font-size:22px;
+        gap:5px;
+    }
+
+    .logo-flag{
+        width:16px;
+        height:11px;
     }
 
     .hero h1{

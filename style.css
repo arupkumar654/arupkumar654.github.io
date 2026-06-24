@@ -54,9 +54,18 @@ body{
 }
 
 .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
     font-size:28px;
     font-weight:700;
     color:#ffffff;
+}
+
+.flag{
+    font-size:32px;
+    line-height:1;
 }
 
 .nav-links{

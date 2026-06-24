@@ -14,8 +14,19 @@ html{
 }
 
 body{
-    background:#f5f7fa;
-    color:#333;
+    background:
+    linear-gradient(
+        rgba(15,23,42,.82),
+        rgba(15,23,42,.82)
+    ),
+    url("./images/hd-background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    color:#ffffff;
     line-height:1.6;
     overflow-x:hidden;
 }
@@ -29,20 +40,23 @@ body{
     top:0;
     left:0;
     width:100%;
-    background:rgba(255,255,255,.96);
+
+    background:rgba(255,255,255,.12);
     backdrop-filter:blur(12px);
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:15px 8%;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+
     z-index:1000;
 }
 
 .logo{
-    font-size:24px;
+    font-size:28px;
     font-weight:700;
-    color:#0f172a;
+    color:#ffffff;
 }
 
 .nav-links{
@@ -54,28 +68,28 @@ body{
 
 .nav-links a{
     text-decoration:none;
-    color:#0f172a;
+    color:#ffffff;
     font-weight:500;
     transition:.3s;
 }
 
 .nav-links a:hover{
-    color:#2563eb;
+    color:#93c5fd;
 }
 
 /* =================================
-   HAMBURGER MENU
+   HAMBURGER
 ================================= */
 
 .hamburger{
     display:none;
     font-size:30px;
     cursor:pointer;
-    color:#0f172a;
+    color:white;
 }
 
 /* =================================
-   DROPDOWN MENU
+   DROPDOWN
 ================================= */
 
 .dropdown{
@@ -85,27 +99,32 @@ body{
 .dropdown-menu{
     display:none;
     position:absolute;
-    top:40px;
-    left:0;
-    min-width:230px;
-    background:#fff;
-    border-radius:12px;
-    overflow:hidden;
-    list-style:none;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
 
-.dropdown-menu li{
-    width:100%;
+    top:100%;
+    left:0;
+
+    min-width:240px;
+
+    background:white;
+
+    border-radius:12px;
+
+    list-style:none;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+    z-index:9999;
 }
 
 .dropdown-menu li a{
     display:block;
-    padding:14px 18px;
+    padding:14px 20px;
+    color:#111827;
 }
 
 .dropdown-menu li a:hover{
     background:#eff6ff;
+    color:#2563eb;
 }
 
 .dropdown:hover .dropdown-menu{
@@ -113,59 +132,44 @@ body{
 }
 
 /* =================================
-   HERO SECTION
+   HERO
 ================================= */
 
 .hero{
-    min-height:90vh;
+    min-height:100vh;
 
-    background:
-    linear-gradient(
-        rgba(15,23,42,0.75),
-        rgba(30,58,138,0.75)
-    ),
-    url("./images/hd-background.jpg");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-
-    color:white;
-
-    padding:100px 8% 50px;
+    padding:110px 8% 40px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:25px;
+    gap:30px;
 }
 
 .hero-content{
     flex:1;
-    max-width:650px;
+    max-width:700px;
 }
 
 .hero h1{
-    font-size:58px;
-    line-height:1.1;
+    font-size:62px;
     margin-bottom:10px;
 }
 
 .hero h2{
-    font-size:26px;
+    font-size:28px;
     font-weight:400;
     color:#dbeafe;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
 .hero p{
-    font-size:17px;
-    line-height:1.7;
-    margin-bottom:15px;
+    font-size:18px;
+    line-height:1.8;
 }
 
 .tagline{
-    margin-top:15px;
+    margin-top:20px;
     font-size:18px;
     font-weight:600;
     color:#93c5fd;
@@ -182,22 +186,43 @@ body{
 }
 
 .profile-photo img{
-    width:320px;
-    height:320px;
+
+    width:430px;
+    height:430px;
+
     object-fit:cover;
+
     border-radius:50%;
-    border:6px solid white;
-    box-shadow:0 15px 30px rgba(0,0,0,.35);
+
+    opacity:.85;
+
+    border:5px solid rgba(255,255,255,.5);
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.25),
+    0 20px 50px rgba(0,0,0,.45);
+
+    transition:.4s;
+}
+
+.profile-photo img:hover{
+    opacity:1;
+    transform:scale(1.03);
 }
 
 /* =================================
-   STATS SECTION
+   STATS
 ================================= */
 
 .stats{
-    background:#0f172a;
-    color:white;
-    padding:35px 8%;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+
+    margin:20px 8%;
+
+    border-radius:20px;
+
+    padding:35px;
 }
 
 .stats-grid{
@@ -213,23 +238,22 @@ body{
 }
 
 .stats p{
-    margin-top:5px;
-    font-size:16px;
+    color:white;
 }
 
 /* =================================
-   SECTION
+   SECTIONS
 ================================= */
 
 .section{
-    padding:45px 8%;
+    padding:40px 8%;
 }
 
 .section-title{
     text-align:center;
-    font-size:34px;
-    color:#0f172a;
-    margin-bottom:25px;
+    font-size:36px;
+    color:white;
+    margin-bottom:30px;
 }
 
 /* =================================
@@ -239,14 +263,21 @@ body{
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+    gap:25px;
 }
 
 .card{
-    background:white;
+
+    background:rgba(255,255,255,.92);
+
+    color:#111827;
+
     padding:25px;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
     transition:.3s;
 }
 
@@ -260,7 +291,7 @@ body{
 }
 
 /* =================================
-   CERTIFICATION PAGE
+   CERTIFICATIONS
 ================================= */
 
 .gallery{
@@ -273,7 +304,6 @@ body{
     background:white;
     border-radius:15px;
     overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .cert-card img{
@@ -284,12 +314,10 @@ body{
 
 .cert-content{
     padding:20px;
-    text-align:center;
 }
 
 .cert-content h3{
     color:#2563eb;
-    margin-bottom:10px;
 }
 
 /* =================================
@@ -301,9 +329,12 @@ body{
     position:fixed;
     top:0;
     left:0;
+
     width:100%;
     height:100%;
+
     background:rgba(0,0,0,.9);
+
     z-index:9999;
 }
 
@@ -319,6 +350,7 @@ body{
     position:absolute;
     top:20px;
     right:30px;
+
     color:white;
     font-size:45px;
     cursor:pointer;
@@ -329,18 +361,21 @@ body{
 ================================= */
 
 footer{
-    background:#111827;
-    color:white;
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
     text-align:center;
+
     padding:20px;
 }
 
 footer p{
-    font-size:14px;
+    color:white;
 }
 
 /* =================================
-   TABLET RESPONSIVE
+   TABLET
 ================================= */
 
 @media(max-width:1024px){
@@ -348,16 +383,11 @@ footer p{
     .hero{
         flex-direction:column;
         text-align:center;
-        padding-top:120px;
-    }
-
-    .hero-content{
-        max-width:100%;
     }
 
     .profile-photo img{
-        width:280px;
-        height:280px;
+        width:350px;
+        height:350px;
     }
 
     .stats-grid{
@@ -366,7 +396,7 @@ footer p{
 }
 
 /* =================================
-   MOBILE RESPONSIVE
+   MOBILE
 ================================= */
 
 @media(max-width:768px){
@@ -382,11 +412,11 @@ footer p{
 
     .nav-links{
         display:none;
-        width:100%;
         flex-direction:column;
+        width:100%;
         text-align:center;
-        gap:12px;
         margin-top:15px;
+        gap:12px;
     }
 
     .nav-links.active{
@@ -396,43 +426,34 @@ footer p{
     .dropdown-menu{
         position:static;
         width:100%;
-        box-shadow:none;
         margin-top:5px;
     }
 
     .hero{
-        padding:110px 20px 40px;
         flex-direction:column;
         text-align:center;
+        padding:120px 20px 40px;
     }
 
     .hero h1{
-        font-size:40px;
+        font-size:42px;
     }
 
     .hero h2{
-        font-size:20px;
+        font-size:22px;
     }
 
     .hero p{
-        font-size:15px;
-    }
-
-    .tagline{
         font-size:16px;
     }
 
     .profile-photo img{
-        width:220px;
-        height:220px;
-        margin-top:15px;
+        width:300px;
+        height:300px;
+        margin-top:20px;
     }
 
     .stats-grid{
-        grid-template-columns:1fr;
-    }
-
-    .grid{
         grid-template-columns:1fr;
     }
 
@@ -441,14 +462,18 @@ footer p{
     }
 
     .section-title{
-        font-size:28px;
+        font-size:30px;
     }
 }
 
 @media(max-width:480px){
 
+    .logo{
+        font-size:22px;
+    }
+
     .hero h1{
-        font-size:32px;
+        font-size:34px;
     }
 
     .hero h2{
@@ -456,7 +481,7 @@ footer p{
     }
 
     .profile-photo img{
-        width:180px;
-        height:180px;
+        width:250px;
+        height:250px;
     }
 }

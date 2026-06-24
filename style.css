@@ -1,3 +1,4 @@
+```css
 /* =========================
    GLOBAL STYLES
 ========================= */
@@ -14,6 +15,7 @@ body{
     background:#f5f7fa;
     color:#333;
     line-height:1.6;
+    overflow-x:hidden;
 }
 
 /* =========================
@@ -25,7 +27,8 @@ body{
     top:0;
     left:0;
     width:100%;
-    background:#ffffff;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -69,14 +72,15 @@ body{
 .dropdown-menu{
     display:none;
     position:absolute;
-    top:35px;
+    top:45px;
     left:0;
-    min-width:220px;
     background:#fff;
-    border-radius:10px;
-    padding:10px 0;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    min-width:240px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
     list-style:none;
+    z-index:9999;
 }
 
 .dropdown-menu li{
@@ -85,11 +89,14 @@ body{
 
 .dropdown-menu li a{
     display:block;
-    padding:12px 20px;
+    padding:14px 20px;
+    color:#111827;
+    transition:.3s;
 }
 
 .dropdown-menu li a:hover{
-    background:#f3f4f6;
+    background:#eff6ff;
+    color:#2563eb;
 }
 
 .dropdown:hover .dropdown-menu{
@@ -109,6 +116,7 @@ body{
     align-items:center;
     justify-content:space-between;
     flex-wrap:wrap;
+    gap:40px;
 }
 
 .hero-content{
@@ -138,12 +146,12 @@ body{
 ========================= */
 
 .profile-photo img{
-    width:300px;
-    height:300px;
+    width:380px;
+    height:380px;
     object-fit:cover;
     border-radius:50%;
-    border:6px solid white;
-    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    border:8px solid white;
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
 }
 
 /* =========================
@@ -158,18 +166,19 @@ body{
 
 .btn{
     display:inline-block;
-    padding:14px 28px;
+    padding:14px 30px;
     background:white;
     color:#0f172a;
     text-decoration:none;
     font-weight:600;
-    border-radius:8px;
+    border-radius:50px;
     transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
 .btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 .btn-blue{
@@ -232,38 +241,19 @@ body{
 .card{
     background:white;
     padding:30px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
 }
 
 .card:hover{
     transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(37,99,235,.15);
 }
 
 .card h3{
     color:#2563eb;
     margin-bottom:15px;
-}
-
-/* =========================
-   CONTACT SECTION
-========================= */
-
-.contact-card{
-    max-width:700px;
-    margin:auto;
-    text-align:center;
-}
-
-.contact-card p{
-    margin-top:15px;
-}
-
-.contact-card a{
-    color:#2563eb;
-    text-decoration:none;
-    font-weight:600;
 }
 
 /* =========================
@@ -353,6 +343,27 @@ footer p{
 }
 
 /* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media(max-width:1024px){
+
+    .hero{
+        justify-content:center;
+        text-align:center;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .profile-photo img{
+        width:300px;
+        height:300px;
+    }
+}
+
+/* =========================
    MOBILE RESPONSIVE
 ========================= */
 
@@ -360,20 +371,20 @@ footer p{
 
     .navbar{
         flex-direction:column;
-        gap:15px;
+        gap:12px;
         padding:15px;
     }
 
     .nav-links{
         flex-wrap:wrap;
         justify-content:center;
-        gap:15px;
+        gap:12px;
     }
 
     .hero{
+        flex-direction:column;
         text-align:center;
-        justify-content:center;
-        padding-top:180px;
+        padding:170px 25px 70px;
     }
 
     .hero h1{
@@ -384,8 +395,40 @@ footer p{
         font-size:22px;
     }
 
-    .profile-photo{
-        margin-top:40px;
+    .hero p{
+        font-size:16px;
+    }
+
+    .profile-photo img{
+        width:250px;
+        height:250px;
+    }
+
+    .btn-group{
+        justify-content:center;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero h2{
+        font-size:18px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
     }
 
     .profile-photo img{
@@ -393,12 +436,9 @@ footer p{
         height:220px;
     }
 
-    .btn-group{
-        justify-content:center;
+    .btn{
+        width:100%;
+        text-align:center;
     }
-
-    .section-title{
-        font-size:34px;
-    }
-
 }
+```

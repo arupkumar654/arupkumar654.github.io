@@ -66,8 +66,8 @@ body{
 
 /* Small Transparent India Flag Logo */
 .logo-flag{
-    width:30px;
-    height:24px;
+    width:50px;
+    height:44px;
 
     object-fit:contain;
     display:inline-block;

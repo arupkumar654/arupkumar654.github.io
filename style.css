@@ -1,7 +1,6 @@
-```css
-/* =========================
+/* =================================
    GLOBAL STYLES
-========================= */
+================================= */
 
 *{
     margin:0;
@@ -21,23 +20,23 @@ body{
     overflow-x:hidden;
 }
 
-/* =========================
+/* =================================
    NAVBAR
-========================= */
+================================= */
 
 .navbar{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(12px);
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(10px);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    padding:15px 8%;
     z-index:1000;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 
 .logo{
@@ -49,12 +48,8 @@ body{
 .nav-links{
     display:flex;
     align-items:center;
-    gap:30px;
+    gap:25px;
     list-style:none;
-}
-
-.nav-links li{
-    position:relative;
 }
 
 .nav-links a{
@@ -68,44 +63,39 @@ body{
     color:#2563eb;
 }
 
-/* =========================
-   HAMBURGER
-========================= */
-
 .hamburger{
     display:none;
     font-size:30px;
     cursor:pointer;
-    color:#0f172a;
 }
 
-/* =========================
+/* =================================
    DROPDOWN
-========================= */
+================================= */
+
+.dropdown{
+    position:relative;
+}
 
 .dropdown-menu{
     display:none;
     position:absolute;
     top:40px;
     left:0;
+    min-width:230px;
     background:#fff;
-    min-width:240px;
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
     list-style:none;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
-.dropdown-menu li{
-    width:100%;
-}
-
-.dropdown-menu a{
+.dropdown-menu li a{
     display:block;
     padding:14px 18px;
 }
 
-.dropdown-menu a:hover{
+.dropdown-menu li a:hover{
     background:#eff6ff;
 }
 
@@ -113,47 +103,55 @@ body{
     display:block;
 }
 
-/* =========================
-   HERO
-========================= */
+/* =================================
+   HERO SECTION
+================================= */
 
 .hero{
-    min-height:100vh;
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    min-height:90vh;
+    background:
+        linear-gradient(
+            rgba(15,23,42,.80),
+            rgba(30,58,138,.80)
+        ),
+        url("images/background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
     color:white;
-    padding:140px 10% 80px;
+
+    padding:110px 8% 60px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:50px;
+    gap:30px;
 }
 
 .hero-content{
     flex:1;
-    max-width:700px;
+    max-width:650px;
 }
 
 .hero h1{
-    font-size:64px;
-    margin-bottom:10px;
+    font-size:58px;
+    margin-bottom:8px;
 }
 
 .hero h2{
-    font-size:28px;
+    font-size:26px;
     font-weight:400;
     color:#cbd5e1;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .hero p{
-    font-size:18px;
-    line-height:1.9;
-    margin-bottom:30px;
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:25px;
 }
-
-/* =========================
-   PROFILE PHOTO
-========================= */
 
 .profile-photo{
     flex:1;
@@ -162,27 +160,27 @@ body{
 }
 
 .profile-photo img{
-    width:380px;
-    height:380px;
+    width:320px;
+    height:320px;
     object-fit:cover;
     border-radius:50%;
-    border:8px solid white;
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+    border:6px solid white;
+    box-shadow:0 15px 30px rgba(0,0,0,.35);
 }
 
-/* =========================
+/* =================================
    BUTTONS
-========================= */
+================================= */
 
 .btn-group{
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
+    gap:10px;
 }
 
 .btn{
     display:inline-block;
-    padding:14px 28px;
+    padding:13px 24px;
     border-radius:50px;
     text-decoration:none;
     font-weight:600;
@@ -193,7 +191,7 @@ body{
 }
 
 .btn:hover{
-    transform:translateY(-4px);
+    transform:translateY(-3px);
 }
 
 .btn-blue{
@@ -201,87 +199,87 @@ body{
     color:white;
 }
 
-/* =========================
+/* =================================
    STATS
-========================= */
+================================= */
 
 .stats{
     background:#0f172a;
     color:white;
-    padding:70px 10%;
+    padding:45px 8%;
 }
 
 .stats-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:30px;
+    gap:20px;
     text-align:center;
 }
 
 .stats h2{
-    font-size:52px;
+    font-size:48px;
     color:#60a5fa;
 }
 
 .stats p{
-    margin-top:10px;
+    margin-top:5px;
 }
 
-/* =========================
+/* =================================
    SECTION
-========================= */
+================================= */
 
 .section{
-    padding:80px 10%;
+    padding:60px 8%;
 }
 
 .section-title{
     text-align:center;
-    font-size:42px;
-    margin-bottom:50px;
+    font-size:38px;
     color:#0f172a;
+    margin-bottom:35px;
 }
 
-/* =========================
+/* =================================
    CARDS
-========================= */
+================================= */
 
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+    gap:20px;
 }
 
 .card{
     background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 }
 
 .card h3{
     color:#2563eb;
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
-/* =========================
-   CERTIFICATIONS
-========================= */
+/* =================================
+   CERTIFICATION PAGE
+================================= */
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
 }
 
 .cert-card{
     background:white;
-    border-radius:20px;
+    border-radius:15px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
@@ -297,9 +295,9 @@ body{
     text-align:center;
 }
 
-/* =========================
+/* =================================
    LIGHTBOX
-========================= */
+================================= */
 
 .lightbox{
     display:none;
@@ -313,9 +311,9 @@ body{
 }
 
 .lightbox img{
+    display:block;
     max-width:90%;
     max-height:90%;
-    display:block;
     margin:auto;
     margin-top:2%;
 }
@@ -325,24 +323,24 @@ body{
     top:20px;
     right:30px;
     color:white;
-    font-size:50px;
+    font-size:45px;
     cursor:pointer;
 }
 
-/* =========================
+/* =================================
    FOOTER
-========================= */
+================================= */
 
 footer{
     background:#111827;
     color:white;
     text-align:center;
-    padding:30px;
+    padding:20px;
 }
 
-/* =========================
+/* =================================
    TABLET
-========================= */
+================================= */
 
 @media(max-width:1024px){
 
@@ -356,8 +354,8 @@ footer{
     }
 
     .profile-photo img{
-        width:300px;
-        height:300px;
+        width:280px;
+        height:280px;
     }
 
     .stats-grid{
@@ -365,9 +363,9 @@ footer{
     }
 }
 
-/* =========================
+/* =================================
    MOBILE
-========================= */
+================================= */
 
 @media(max-width:768px){
 
@@ -384,9 +382,9 @@ footer{
         display:none;
         width:100%;
         flex-direction:column;
-        gap:15px;
-        margin-top:15px;
         text-align:center;
+        gap:12px;
+        margin-top:15px;
     }
 
     .nav-links.active{
@@ -395,18 +393,13 @@ footer{
 
     .dropdown-menu{
         position:static;
-        display:none;
         width:100%;
         box-shadow:none;
         margin-top:5px;
     }
 
-    .dropdown:hover .dropdown-menu{
-        display:block;
-    }
-
     .hero{
-        padding:130px 20px 60px;
+        padding:120px 20px 50px;
     }
 
     .hero h1{
@@ -414,16 +407,17 @@ footer{
     }
 
     .hero h2{
-        font-size:22px;
+        font-size:20px;
     }
 
     .hero p{
-        font-size:16px;
+        font-size:15px;
     }
 
     .profile-photo img{
         width:220px;
         height:220px;
+        margin-top:20px;
     }
 
     .btn-group{
@@ -441,18 +435,18 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .grid{
+        grid-template-columns:1fr;
+    }
+
     .section{
-        padding:60px 20px;
+        padding:50px 20px;
     }
 
     .section-title{
-        font-size:32px;
+        font-size:30px;
     }
 }
-
-/* =========================
-   SMALL MOBILE
-========================= */
 
 @media(max-width:480px){
 
@@ -469,4 +463,3 @@ footer{
         height:180px;
     }
 }
-```

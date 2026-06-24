@@ -152,7 +152,13 @@ body{
     line-height:1.7;
     margin-bottom:25px;
 }
-
+.tagline{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:600;
+    color:#93c5fd;
+    line-height:1.8;
+}
 .profile-photo{
     flex:1;
     display:flex;

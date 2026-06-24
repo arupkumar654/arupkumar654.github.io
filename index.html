@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,205 +7,46 @@
 <title>Arup Sethy | Project Manager</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
-body{
-background:#f5f7fa;
-color:#333;
-}
-
-/* HEADER */
-
-.hero{
-background:linear-gradient(135deg,#0f172a,#1e3a8a);
-color:white;
-padding:80px 10%;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
-}
-
-.hero-content{
-max-width:700px;
-}
-
-.hero h1{
-font-size:60px;
-margin-bottom:10px;
-}
-
-.hero h2{
-font-size:28px;
-font-weight:400;
-margin-bottom:20px;
-color:#cbd5e1;
-}
-
-.hero p{
-font-size:18px;
-line-height:1.8;
-margin-bottom:30px;
-}
-
-/* PHOTO */
-
-.profile-photo img{
-width:280px;
-height:280px;
-object-fit:cover;
-border-radius:50%;
-border:6px solid white;
-box-shadow:0 15px 35px rgba(0,0,0,.3);
-}
-
-/* BUTTONS */
-
-.btn-group{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-display:inline-block;
-padding:14px 28px;
-background:white;
-color:#0f172a;
-text-decoration:none;
-font-weight:600;
-border-radius:8px;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-.btn-blue{
-background:#2563eb;
-color:white;
-}
-
-/* SECTION */
-
-.section{
-padding:80px 10%;
-}
-
-.section-title{
-text-align:center;
-font-size:40px;
-margin-bottom:50px;
-color:#0f172a;
-}
-
-/* CARDS */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card h3{
-margin-bottom:15px;
-color:#2563eb;
-}
-
-/* STATS */
-
-.stats{
-background:#0f172a;
-color:white;
-padding:70px 10%;
-}
-
-.stats-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-text-align:center;
-gap:30px;
-}
-
-.stats h2{
-font-size:50px;
-color:#60a5fa;
-}
-
-.stats p{
-margin-top:10px;
-}
-
-/* FOOTER */
-
-footer{
-background:#111827;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-footer a{
-color:#60a5fa;
-text-decoration:none;
-}
-
-@media(max-width:768px){
-
-.hero{
-text-align:center;
-justify-content:center;
-}
-
-.profile-photo{
-margin-top:40px;
-}
-
-.hero h1{
-font-size:42px;
-}
-
-.hero h2{
-font-size:22px;
-}
-
-.profile-photo img{
-width:220px;
-height:220px;
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<section class="hero">
+<nav class="navbar">
+
+<div class="logo">Arup Sethy</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#expertise">Expertise</a></li>
+
+<li class="dropdown">
+<a href="#">Profile ▼</a>
+
+<ul class="dropdown-menu">
+<li><a href="career.html">Career Highlights</a></li>
+<li><a href="#certifications">Certifications</a></li>
+<li><a href="Arup_Sethy_Resume.pdf" download>Resume</a></li>
+</ul>
+
+</li>
+
+<li>
+<a href="https://in.linkedin.com/in/arup-sethy-53aab8a5" target="_blank">
+LinkedIn
+</a>
+</li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section id="home" class="hero">
 
 <div class="hero-content">
 
@@ -215,11 +55,10 @@ height:220px;
 <h2>Project Manager | PMO | Delivery Manager</h2>
 
 <p>
-PMP® Certified Project Manager with 12+ years of experience delivering
-enterprise IT, Digital Transformation, SaaS and AI-driven programs.
-Proven track record managing ₹50+ Cr portfolios, PMO governance,
-stakeholder management, Agile delivery and business transformation
-initiatives across Automotive, Insurance, Aviation and Telecom domains.
+PMP® Certified Project Manager with 12+ years of experience delivering enterprise IT,
+Digital Transformation, SaaS and AI-driven programs. Proven track record managing
+₹50+ Cr portfolios, PMO governance, stakeholder management, Agile delivery and
+business transformation initiatives across Automotive, Insurance, Aviation and Telecom domains.
 </p>
 
 <div class="btn-group">
@@ -248,7 +87,7 @@ LinkedIn
 
 </section>
 
-<section class="stats">
+<section id="about" class="stats">
 
 <div class="stats-grid">
 
@@ -276,7 +115,7 @@ LinkedIn
 
 </section>
 
-<section class="section">
+<section id="expertise" class="section">
 
 <h2 class="section-title">Core Expertise</h2>
 
@@ -284,57 +123,39 @@ LinkedIn
 
 <div class="card">
 <h3>Project Management</h3>
-<p>
-End-to-end project delivery, planning, execution,
-monitoring, governance and closure.
-</p>
+<p>End-to-end project delivery, planning, execution, monitoring, governance and closure.</p>
 </div>
 
 <div class="card">
 <h3>PMO Leadership</h3>
-<p>
-Portfolio governance, KPI tracking, budget control,
-risk management and reporting.
-</p>
+<p>Portfolio governance, KPI tracking, budget control, risk management and reporting.</p>
 </div>
 
 <div class="card">
 <h3>Agile Delivery</h3>
-<p>
-Scrum, Kanban, SAFe, Sprint Planning,
-Release Management and Agile Coaching.
-</p>
+<p>Scrum, Kanban, SAFe, Sprint Planning, Release Management and Agile Coaching.</p>
 </div>
 
 <div class="card">
 <h3>Digital Transformation</h3>
-<p>
-Enterprise modernization, cloud migration,
-automation and process optimization.
-</p>
+<p>Enterprise modernization, cloud migration, automation and process optimization.</p>
 </div>
 
 <div class="card">
 <h3>AI & Innovation</h3>
-<p>
-Voice Bots, GenAI, Intelligent Automation,
-Computer Vision solutions.
-</p>
+<p>Voice Bots, GenAI, Intelligent Automation, Computer Vision solutions.</p>
 </div>
 
 <div class="card">
 <h3>Stakeholder Management</h3>
-<p>
-Executive communication, vendor management,
-cross-functional collaboration and governance.
-</p>
+<p>Executive communication, vendor management, cross-functional collaboration and governance.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section">
+<section id="certifications" class="section">
 
 <h2 class="section-title">Certifications</h2>
 
@@ -364,14 +185,28 @@ cross-functional collaboration and governance.
 
 </section>
 
+<section id="contact" class="section">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card contact-card">
+
+<p>📧 arupkumarset@gmail.com</p>
+<p>📱 +91 8130590534</p>
+
+<p>
+<a href="https://in.linkedin.com/in/arup-sethy-53aab8a5" target="_blank">
+Connect on LinkedIn
+</a>
+</p>
+
+</div>
+
+</section>
+
 <footer>
 
 <p>
-📧 arupkumarset@gmail.com |
-📱 +91 8130590534
-</p>
-
-<p style="margin-top:10px;">
 © 2026 Arup Sethy | Project Manager Portfolio
 </p>
 

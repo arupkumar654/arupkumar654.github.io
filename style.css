@@ -30,13 +30,13 @@ body{
     left:0;
     width:100%;
     background:rgba(255,255,255,.96);
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 8%;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
     z-index:1000;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 
 .logo{
@@ -63,14 +63,19 @@ body{
     color:#2563eb;
 }
 
+/* =================================
+   HAMBURGER MENU
+================================= */
+
 .hamburger{
     display:none;
     font-size:30px;
     cursor:pointer;
+    color:#0f172a;
 }
 
 /* =================================
-   DROPDOWN
+   DROPDOWN MENU
 ================================= */
 
 .dropdown{
@@ -87,7 +92,11 @@ body{
     border-radius:12px;
     overflow:hidden;
     list-style:none;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.dropdown-menu li{
+    width:100%;
 }
 
 .dropdown-menu li a{
@@ -109,12 +118,13 @@ body{
 
 .hero{
     min-height:90vh;
+
     background:
-        linear-gradient(
-            rgba(15,23,42,.80),
-            rgba(30,58,138,.80)
-        ),
-        url("images/background.jpg");
+    linear-gradient(
+        rgba(15,23,42,0.75),
+        rgba(30,58,138,0.75)
+    ),
+    url("./images/hd-background.jpg");
 
     background-size:cover;
     background-position:center;
@@ -122,12 +132,12 @@ body{
 
     color:white;
 
-    padding:110px 8% 60px;
+    padding:100px 8% 50px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:30px;
+    gap:25px;
 }
 
 .hero-content{
@@ -137,28 +147,34 @@ body{
 
 .hero h1{
     font-size:58px;
-    margin-bottom:8px;
+    line-height:1.1;
+    margin-bottom:10px;
 }
 
 .hero h2{
     font-size:26px;
     font-weight:400;
-    color:#cbd5e1;
-    margin-bottom:18px;
+    color:#dbeafe;
+    margin-bottom:15px;
 }
 
 .hero p{
     font-size:17px;
     line-height:1.7;
-    margin-bottom:25px;
+    margin-bottom:15px;
 }
+
 .tagline{
-    margin-top:20px;
+    margin-top:15px;
     font-size:18px;
     font-weight:600;
     color:#93c5fd;
-    line-height:1.8;
 }
+
+/* =================================
+   PROFILE PHOTO
+================================= */
+
 .profile-photo{
     flex:1;
     display:flex;
@@ -175,44 +191,13 @@ body{
 }
 
 /* =================================
-   BUTTONS
-================================= */
-
-.btn-group{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 24px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    background:white;
-    color:#0f172a;
-    transition:.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.btn-blue{
-    background:#2563eb;
-    color:white;
-}
-
-/* =================================
-   STATS
+   STATS SECTION
 ================================= */
 
 .stats{
     background:#0f172a;
     color:white;
-    padding:45px 8%;
+    padding:35px 8%;
 }
 
 .stats-grid{
@@ -229,6 +214,7 @@ body{
 
 .stats p{
     margin-top:5px;
+    font-size:16px;
 }
 
 /* =================================
@@ -236,14 +222,14 @@ body{
 ================================= */
 
 .section{
-    padding:60px 8%;
+    padding:45px 8%;
 }
 
 .section-title{
     text-align:center;
-    font-size:38px;
+    font-size:34px;
     color:#0f172a;
-    margin-bottom:35px;
+    margin-bottom:25px;
 }
 
 /* =================================
@@ -301,6 +287,11 @@ body{
     text-align:center;
 }
 
+.cert-content h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
 /* =================================
    LIGHTBOX
 ================================= */
@@ -344,8 +335,12 @@ footer{
     padding:20px;
 }
 
+footer p{
+    font-size:14px;
+}
+
 /* =================================
-   TABLET
+   TABLET RESPONSIVE
 ================================= */
 
 @media(max-width:1024px){
@@ -353,6 +348,7 @@ footer{
     .hero{
         flex-direction:column;
         text-align:center;
+        padding-top:120px;
     }
 
     .hero-content{
@@ -370,7 +366,7 @@ footer{
 }
 
 /* =================================
-   MOBILE
+   MOBILE RESPONSIVE
 ================================= */
 
 @media(max-width:768px){
@@ -405,7 +401,9 @@ footer{
     }
 
     .hero{
-        padding:120px 20px 50px;
+        padding:110px 20px 40px;
+        flex-direction:column;
+        text-align:center;
     }
 
     .hero h1{
@@ -420,21 +418,14 @@ footer{
         font-size:15px;
     }
 
+    .tagline{
+        font-size:16px;
+    }
+
     .profile-photo img{
         width:220px;
         height:220px;
-        margin-top:20px;
-    }
-
-    .btn-group{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .btn{
-        width:100%;
-        max-width:320px;
-        text-align:center;
+        margin-top:15px;
     }
 
     .stats-grid{
@@ -446,11 +437,11 @@ footer{
     }
 
     .section{
-        padding:50px 20px;
+        padding:40px 20px;
     }
 
     .section-title{
-        font-size:30px;
+        font-size:28px;
     }
 }
 

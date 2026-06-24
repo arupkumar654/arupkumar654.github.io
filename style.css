@@ -1,0 +1,73 @@
+/* NAVIGATION */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+box-shadow:0 2px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#0f172a;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:30px;
+align-items:center;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#0f172a;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#2563eb;
+}
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:35px;
+left:0;
+background:white;
+min-width:220px;
+list-style:none;
+padding:10px 0;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.dropdown-menu li{
+padding:10px 20px;
+}
+
+.dropdown-menu li a{
+display:block;
+}
+
+.dropdown:hover .dropdown-menu{
+display:block;
+}
+
+/* prevent navbar overlap */
+.hero{
+padding-top:140px;
+}

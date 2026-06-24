@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: url('images/hd-background.jpg') no-repeat center center fixed;
-  background-size: cover; /* ensures full-page responsive fit */
+  background-size: cover;   /* responsive full-page fit */
   color: #0b1a3a;
 }
 
@@ -43,6 +43,29 @@ body {
   text-decoration: underline;
 }
 
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu li a {
+  color: #0b1a3a;
+  text-decoration: none;
+}
+
 /* Hero Section */
 .hero {
   display: flex;
@@ -70,11 +93,85 @@ body {
   margin-bottom: 20px;
 }
 
+.btn-group {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 4px;
+  background: #f0f0f0;
+  color: #0b1a3a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn-blue {
+  background: #0b1a3a;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
 /* Profile Photo */
 .profile-photo img {
   width: 200px; /* default size */
   border-radius: 50%;
   margin-top: 20px;
+}
+
+/* Stats Section */
+.stats {
+  background: rgba(255,255,255,0.9);
+  padding: 50px 20px;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.stats-grid h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Expertise Section */
+.section {
+  padding: 60px 20px;
+  background: rgba(255,255,255,0.9);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.95);
+  font-size: 0.9rem;
 }
 
 /* Responsive Design */
@@ -118,5 +215,9 @@ body {
 
   .profile-photo img {
     width: 120px; /* smaller on mobile */
+  }
+
+  body {
+    background-attachment: scroll; /* smoother on mobile */
   }
 }

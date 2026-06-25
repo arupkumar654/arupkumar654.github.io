@@ -1,3 +1,12 @@
+section,
+nav,
+footer,
+.card,
+.stats{
+    position:relative;
+    z-index:2;
+}
+
 /* ============================
    BACKGROUND VIDEO
 ============================ */

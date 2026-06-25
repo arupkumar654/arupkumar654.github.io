@@ -282,7 +282,7 @@ body{
     text-align:center;
     font-size:36px;
     color:white;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 /* =================================
@@ -351,6 +351,10 @@ body{
 
 .cert-section{
     padding-top:180px;
+}
+
+.cert-page{
+    padding-top:30px;
 }
 
 /* =================================
